@@ -16,17 +16,19 @@
  */
 package org.jclouds.googlecomputeengine.compute.loaders;
 
-import javax.annotation.Resource;
-import javax.inject.Inject;
-import javax.inject.Singleton;
 import java.net.URI;
 import java.util.concurrent.ExecutionException;
 
-import com.google.common.cache.CacheLoader;
+import javax.annotation.Resource;
+import javax.inject.Inject;
+import javax.inject.Singleton;
+
 import org.jclouds.googlecomputeengine.compute.functions.Resources;
 import org.jclouds.googlecomputeengine.domain.Disk;
 import org.jclouds.googlecomputeengine.domain.Image;
 import org.jclouds.logging.Logger;
+
+import com.google.common.cache.CacheLoader;
 
 
 @Singleton

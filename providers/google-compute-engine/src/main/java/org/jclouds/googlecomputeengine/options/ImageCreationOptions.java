@@ -18,11 +18,10 @@ package org.jclouds.googlecomputeengine.options;
 
 import static com.google.common.base.Preconditions.checkNotNull;
 
+import org.jclouds.googlecomputeengine.domain.Deprecated;
 import org.jclouds.googlecomputeengine.domain.Image.RawDisk;
-import org.jclouds.googlecomputeengine.domain.NewTargetInstance.Builder;
 import org.jclouds.javax.annotation.Nullable;
 import org.jclouds.json.SerializedNames;
-import org.jclouds.googlecomputeengine.domain.Deprecated;
 
 import com.google.auto.value.AutoValue;
 

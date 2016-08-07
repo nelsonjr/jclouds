@@ -16,32 +16,8 @@
  */
 package org.jclouds.googlecomputeengine.compute.functions;
 
-import com.google.common.base.Function;
-import com.google.common.base.Predicate;
-import com.google.common.base.Throwables;
-import com.google.common.collect.ImmutableMap;
-import com.google.common.io.BaseEncoding;
-import com.google.common.util.concurrent.Atomics;
-import com.google.gson.Gson;
-import com.google.gson.GsonBuilder;
-import org.jclouds.compute.reference.ComputeServiceConstants;
-import org.jclouds.crypto.Crypto;
-import org.jclouds.googlecomputeengine.GoogleComputeEngineApi;
-import org.jclouds.googlecomputeengine.domain.Instance;
-import org.jclouds.googlecomputeengine.domain.Instance.SerialPortOutput;
-import org.jclouds.googlecomputeengine.domain.Metadata;
-import org.jclouds.googlecomputeengine.domain.Operation;
-import org.jclouds.googlecomputeengine.features.InstanceApi;
-import org.jclouds.logging.Logger;
-import org.jclouds.util.Predicates2;
+import static com.google.common.base.Preconditions.checkNotNull;
 
-import javax.annotation.Resource;
-import javax.crypto.BadPaddingException;
-import javax.crypto.Cipher;
-import javax.crypto.IllegalBlockSizeException;
-import javax.crypto.NoSuchPaddingException;
-import javax.inject.Inject;
-import javax.inject.Named;
 import java.math.BigInteger;
 import java.nio.charset.Charset;
 import java.security.InvalidKeyException;
@@ -59,7 +35,33 @@ import java.util.TimeZone;
 import java.util.concurrent.TimeUnit;
 import java.util.concurrent.atomic.AtomicReference;
 
-import static com.google.common.base.Preconditions.checkNotNull;
+import javax.annotation.Resource;
+import javax.crypto.BadPaddingException;
+import javax.crypto.Cipher;
+import javax.crypto.IllegalBlockSizeException;
+import javax.crypto.NoSuchPaddingException;
+import javax.inject.Inject;
+import javax.inject.Named;
+
+import org.jclouds.compute.reference.ComputeServiceConstants;
+import org.jclouds.crypto.Crypto;
+import org.jclouds.googlecomputeengine.GoogleComputeEngineApi;
+import org.jclouds.googlecomputeengine.domain.Instance;
+import org.jclouds.googlecomputeengine.domain.Instance.SerialPortOutput;
+import org.jclouds.googlecomputeengine.domain.Metadata;
+import org.jclouds.googlecomputeengine.domain.Operation;
+import org.jclouds.googlecomputeengine.features.InstanceApi;
+import org.jclouds.logging.Logger;
+import org.jclouds.util.Predicates2;
+
+import com.google.common.base.Function;
+import com.google.common.base.Predicate;
+import com.google.common.base.Throwables;
+import com.google.common.collect.ImmutableMap;
+import com.google.common.io.BaseEncoding;
+import com.google.common.util.concurrent.Atomics;
+import com.google.gson.Gson;
+import com.google.gson.GsonBuilder;
 
 /**
  * References:

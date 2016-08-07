@@ -32,8 +32,8 @@ import javax.ws.rs.QueryParam;
 import javax.ws.rs.core.MediaType;
 
 import org.jclouds.Fallbacks.NullOnNotFoundOr404;
-import org.jclouds.googlecomputeengine.GoogleComputeEngineApi;
 import org.jclouds.googlecloud.domain.ListPage;
+import org.jclouds.googlecomputeengine.GoogleComputeEngineApi;
 import org.jclouds.googlecomputeengine.domain.Operation;
 import org.jclouds.googlecomputeengine.domain.TargetHttpProxy;
 import org.jclouds.googlecomputeengine.internal.BaseToIteratorOfListPage;

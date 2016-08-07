@@ -18,13 +18,14 @@ package org.jclouds.googlecomputeengine.compute.functions;
 
 import static javax.ws.rs.core.MediaType.APPLICATION_JSON;
 
+import java.net.URI;
+
 import javax.inject.Named;
 import javax.ws.rs.Consumes;
 import javax.ws.rs.DELETE;
 import javax.ws.rs.GET;
 import javax.ws.rs.POST;
 import javax.ws.rs.Path;
-import java.net.URI;
 
 import org.jclouds.Fallbacks.NullOnNotFoundOr404;
 import org.jclouds.googlecomputeengine.domain.Disk;

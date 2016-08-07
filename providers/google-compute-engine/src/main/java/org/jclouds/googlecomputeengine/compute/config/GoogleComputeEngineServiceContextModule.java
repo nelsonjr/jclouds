@@ -52,8 +52,8 @@ import org.jclouds.googlecomputeengine.compute.functions.ImageNameToOperatingSys
 import org.jclouds.googlecomputeengine.compute.functions.InstanceToNodeMetadata;
 import org.jclouds.googlecomputeengine.compute.functions.MachineTypeToHardware;
 import org.jclouds.googlecomputeengine.compute.functions.OrphanedGroupsFromDeadNodes;
-import org.jclouds.googlecomputeengine.compute.functions.Resources;
 import org.jclouds.googlecomputeengine.compute.functions.ResetWindowsPassword;
+import org.jclouds.googlecomputeengine.compute.functions.Resources;
 import org.jclouds.googlecomputeengine.compute.loaders.DiskURIToImage;
 import org.jclouds.googlecomputeengine.compute.options.GoogleComputeEngineTemplateOptions;
 import org.jclouds.googlecomputeengine.compute.predicates.AtomicInstanceVisible;

@@ -18,15 +18,12 @@ package org.jclouds.googlecomputeengine.compute.functions;
 
 import static org.jclouds.compute.util.ComputeServiceUtils.groupFromMapOrName;
 
-import javax.inject.Inject;
 import java.net.URI;
 import java.util.List;
 import java.util.Map;
 
-import com.google.common.base.Function;
-import com.google.common.base.Supplier;
-import com.google.common.cache.LoadingCache;
-import com.google.common.collect.ImmutableList;
+import javax.inject.Inject;
+
 import org.jclouds.collect.Memoized;
 import org.jclouds.compute.domain.Hardware;
 import org.jclouds.compute.domain.NodeMetadata;
@@ -36,6 +33,11 @@ import org.jclouds.compute.functions.GroupNamingConvention;
 import org.jclouds.domain.Location;
 import org.jclouds.googlecomputeengine.domain.Image;
 import org.jclouds.googlecomputeengine.domain.Instance;
+
+import com.google.common.base.Function;
+import com.google.common.base.Supplier;
+import com.google.common.cache.LoadingCache;
+import com.google.common.collect.ImmutableList;
 
 public final class InstanceToNodeMetadata implements Function<Instance, NodeMetadata> {
 
